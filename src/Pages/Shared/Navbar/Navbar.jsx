@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   const navOption = (
     <>
       <li>
-        <a>Item 1</a>
+        <Link to={"/"}>Home</Link>
       </li>
-
       <li>
-        <a>Item 3</a>
+        <Link to={"/menu"}>Our Menu</Link>
+      </li>
+      <li>
+        <Link to={"/order/salad"}>Order</Link>
       </li>
     </>
   );
@@ -44,7 +48,7 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOption}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">login</a>
         </div>
       </div>
     </>

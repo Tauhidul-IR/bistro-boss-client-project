@@ -17,7 +17,7 @@ const Footer = () => {
           <p>
             Bistro-Boss-Restaurant
             <br />
-            Providing reliable tech since 2010
+            Providing since 2010
           </p>
         </div>
         <div>
