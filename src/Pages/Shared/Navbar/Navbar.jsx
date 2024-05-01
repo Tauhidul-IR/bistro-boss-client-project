@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const navOption = (
     <>
-      <li>
+      <li className="">
         <Link to={"/"}>Home</Link>
       </li>
       <li>
@@ -48,7 +48,9 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOption}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">login</a>
+          <Link to={"/login"}>
+            <a className="btn btn-outline btn-warning">login</a>
+          </Link>
         </div>
       </div>
     </>
