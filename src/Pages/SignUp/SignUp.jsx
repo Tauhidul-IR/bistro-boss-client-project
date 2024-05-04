@@ -10,7 +10,7 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm, useWatch } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -22,6 +22,7 @@ const SignUp = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     createUser(data.email, data.password).then((result) => {
@@ -44,6 +45,8 @@ const SignUp = () => {
     `,
         },
       });
+      reset();
+      navigate("/");
     });
   };
 
