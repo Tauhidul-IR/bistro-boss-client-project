@@ -93,4 +93,4 @@ const NavBar = () => {
 
 export default NavBar;
 
-//67.5
+//68.3
